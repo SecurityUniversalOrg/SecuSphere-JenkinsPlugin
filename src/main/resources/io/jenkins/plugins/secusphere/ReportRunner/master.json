@@ -1,0 +1,179 @@
+{
+  "fields": {
+    "VulnerabilityID": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "VulnerabilityName": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "CVEID": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "CWEID": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Description": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "ReleaseDate": {
+      "description": "",
+      "required": "n",
+      "type": "dynamic-UTC_datetimenow"
+    },
+    "Severity": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "Classification": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "Source": {
+      "description": "",
+      "required": "y",
+      "type": ""
+    },
+    "LastModifiedDate": {
+      "description": "",
+      "required": "y",
+      "type": "dynamic-UTC_datetimenow"
+    },
+    "ReferenceName": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "ReferenceUrl": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "ReferenceTags": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "AddDate": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "SourceCodeFileId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "SourceCodeFileStartLine": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "SourceCodeFileStartCol": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "SourceCodeFileEndLine": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "SourceCodeFileEndCol": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "DockerImageId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "ApplicationId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "HostId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Uri": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "HtmlMethod": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Param": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Attack": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Evidence": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Solution": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "VulnerablePackage": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "VulnerableFileName": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "VulnerableFilePath": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "Status": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "MitigationDate": {
+      "description": "",
+      "required": "n",
+      "type": "dynamic-UTC_datetimenow"
+    },
+    "ScanId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    },
+    "InitialScanId": {
+      "description": "",
+      "required": "n",
+      "type": ""
+    }
+  }
+}

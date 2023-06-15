@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/owasp_baseline.json",
+  "vulnerability_list_location": "alerts",
+  "vulnerability_fields": {
+    "VulnerabilityName": "{name}",
+    "CVEID": "",
+    "CWEID": "CWE-{cweid}",
+    "Description": "{desc}",
+    "Classification": "DAST",
+    "Source": "OWASP_ZAP-CI_CD",
+    "SourceType": "DAST",
+    "Severity": "{riskdesc}",
+    "ReferenceName": "Multiple",
+    "ReferenceUrl": "{reference}",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "{uri}",
+    "HtmlMethod": "{method}",
+    "Param": "{param}",
+    "Attack": "{attack}",
+    "Evidence": "{evidence}",
+    "Solution": "{solution}",
+    "VulnerablePackage": "",
+    "VulnerableFileName": "",
+    "VulnerableFilePath": ""
+  }
+}

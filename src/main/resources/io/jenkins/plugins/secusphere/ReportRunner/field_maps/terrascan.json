@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/terrascan_out.json",
+  "vulnerability_list_location": "results.violations",
+  "vulnerability_fields": {
+    "VulnerabilityName": "Infrastructure as Code - {category} - {rule_name}",
+    "CVEID": "",
+    "CWEID": "CWE-710",
+    "Description": "{description}",
+    "Classification": "IaC",
+    "Source": "Terrascan-CI_CD",
+    "SourceType": "IaC",
+    "Severity": "{severity}",
+    "ReferenceName": "",
+    "ReferenceUrl": "",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "{line}",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "",
+    "Solution": "",
+    "VulnerablePackage": "{resource_name}:{resource_type}",
+    "VulnerableFileName": "{file}",
+    "VulnerableFilePath": "{file}"
+  }
+}

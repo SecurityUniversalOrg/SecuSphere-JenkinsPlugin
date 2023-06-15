@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/filepath.json",
+  "vulnerability_list_location": "matches",
+  "vulnerability_fields": {
+    "VulnerabilityName": "",
+    "CVEID": "",
+    "CWEID": "",
+    "Description": "",
+    "Classification": "",
+    "Source": "",
+    "SourceType": "",
+    "Severity": "",
+    "ReferenceName": "",
+    "ReferenceUrl": "",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "",
+    "Solution": "",
+    "VulnerablePackage": "",
+    "VulnerableFileName": "",
+    "VulnerableFilePath": ""
+  }
+}

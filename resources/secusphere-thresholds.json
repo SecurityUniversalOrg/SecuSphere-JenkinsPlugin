@@ -1,0 +1,12 @@
+{
+  "thresholds": {
+    "secret": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "sca": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "sast": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "iac": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "container": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "infrastructure": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "dast": {"low": null, "medium": null, "high": 5, "critical": 1},
+    "dastapi": {"low": null, "medium": null, "high": 5, "critical": 1}
+  }
+}

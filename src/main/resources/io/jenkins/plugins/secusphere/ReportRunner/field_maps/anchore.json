@@ -1,0 +1,32 @@
+{
+  "input_type": "json",
+  "file_path": "/anchore_report.json",
+  "vulnerability_list_location": "matches",
+  "docker_img_name_location": "source.target.userInput",
+  "vulnerability_fields": {
+    "VulnerabilityName": "Docker Container Package Vulnerability - {vulnerability.id} for package {artifact.name}-{artifact.version}",
+    "CVEID": "{vulnerability.id}",
+    "CWEID": "",
+    "Description": "The Anchore CLI Container Security Scanning tool has discover a Docker Container Package Vulnerability - {vulnerability.id} for package {artifact.name}-{artifact.version}",
+    "Classification": "Container",
+    "Source": "Anchore-CI_CD",
+    "SourceType": "Container",
+    "Severity": "{vulnerability.severity}",
+    "ReferenceName": "Security Tracker",
+    "ReferenceUrl": "{vulnerability.dataSource}",
+    "ReferenceTags": "None",
+    "SourceCodeFileStartLine": "",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "",
+    "Solution": "",
+    "VulnerablePackage": "{artifact.name}-{artifact.version}",
+    "VulnerableFileName": "",
+    "VulnerableFilePath": "{artifact.type}"
+  }
+}

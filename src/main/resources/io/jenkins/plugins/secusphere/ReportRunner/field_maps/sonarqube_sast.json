@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/sonarqube_sast.json",
+  "vulnerability_list_location": "issues",
+  "vulnerability_fields": {
+    "VulnerabilityName": "{message}",
+    "CVEID": "",
+    "CWEID": "",
+    "Description": "{message}",
+    "Classification": "SAST",
+    "Source": "SonarQube-CI_CD",
+    "SourceType": "SAST",
+    "Severity": "{severity}",
+    "ReferenceName": "",
+    "ReferenceUrl": "",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "{textRange.startLine}",
+    "SourceCodeFileStartCol": "{textRange.startOffset}",
+    "SourceCodeFileEndLine": "{textRange.endLine}",
+    "SourceCodeFileEndCol": "{textRange.endOffset}",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "",
+    "Solution": "Rewrite this code to correct the vulnerability.  Estimated effort: {effort}",
+    "VulnerablePackage": "",
+    "VulnerableFileName": "{component}",
+    "VulnerableFilePath": "{component}"
+  }
+}

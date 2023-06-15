@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/secret_scan.json",
+  "vulnerability_list_location": "findings",
+  "vulnerability_fields": {
+    "VulnerabilityName": "Hardcoded Secret - {DetectorName}",
+    "CVEID": "",
+    "CWEID": "CWE-798",
+    "Description": "{DetectorName} Secret/Credential Discovered in file: {SourceMetadata.Data.Filesystem.file}",
+    "Classification": "Secret",
+    "Source": "Trufflehog-CI_CD",
+    "SourceType": "Secret",
+    "Severity": "Critical",
+    "ReferenceName": "",
+    "ReferenceUrl": "",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "{Redacted}",
+    "Solution": "",
+    "VulnerablePackage": "",
+    "VulnerableFileName": "{SourceMetadata.Data.Filesystem.file}",
+    "VulnerableFilePath": "{SourceMetadata.Data.Filesystem.file}"
+  }
+}

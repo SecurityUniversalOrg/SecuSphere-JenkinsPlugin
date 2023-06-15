@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    A plugin that securely dispatches DevSecOps reports to the central SecuSphere server.
+</div>

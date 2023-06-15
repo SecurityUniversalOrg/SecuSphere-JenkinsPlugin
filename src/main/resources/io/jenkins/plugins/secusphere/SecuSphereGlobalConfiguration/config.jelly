@@ -1,0 +1,326 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:section title="${%SecuSphere Global Configuration}">
+        <f:entry title="${%Base URL}" field="baseUrl" description="The Base URL of your SecuSphere Server (ex: https://secusphere.yourorg.com)">
+            <f:textbox value="${it.baseUrl}"/>
+        </f:entry>
+        <f:entry title="${%Credentials ID}" field="credentialsId" description="The Jenkins Credentials ID for the SecuSphere OAuth2 Credentials">
+            <f:textbox value="${it.credentialsId}"/>
+        </f:entry>
+
+        <f:advanced title="Security Gate Thresholds" align="left">
+            <f:section title="Security Gate Thresholds">
+
+                <f:entry title="Enforce Security Gates" field="enforceSecurityGates">
+                    <f:checkbox default="true" />
+                </f:entry>
+
+                <f:entry title="${%Secret Scanning Findings}" help="/plugin/secusphere/help-sg-secrets.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="secretLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="secretLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="secretLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="secretLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%Software_Composition_Analysis_SCA_Findings}" help="/plugin/secusphere/help-sg-sca.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="scaLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="scaLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="scaLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="scaLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%SAST_Findings}" help="/plugin/secusphere/help-sg-sast.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="sastLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="sastLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="sastLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="sastLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%IAC_Findings}" help="/plugin/secusphere/help-sg-iac.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="iacLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="iacLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="iacLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="iacLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%Container Scanning Findings}" help="/plugin/secusphere/help-sg-container.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="containerLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="containerLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="containerLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="containerLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%DAST_Findings}" help="/plugin/secusphere/help-sg-dast.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="dastLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="dastLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="dastLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="dastLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%Infrastructure Security Findings}" help="/plugin/secusphere/help-sg-infra.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="infraLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="infraLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="infraLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="infraLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+                <f:entry title="${%Policy Violation Findings}" help="/plugin/secusphere/help-sg-policy.html">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td width="24"></td>
+                                <td width="25%">${%Critical}</td>
+                                <td width="25%">${%High}</td>
+                                <td width="25%">${%Medium}</td>
+                                <td width="25%">${%Low}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle;">
+
+                                </td>
+                                <td>
+                                    <f:number field="policyLimitCritical" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="policyLimitHigh" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="policyLimitMedium" min="0" />
+                                </td>
+                                <td>
+                                    <f:number field="policyLimitLow" min="0" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </f:entry>
+
+
+            </f:section>
+        </f:advanced>
+
+        <f:advanced title="Archiving Assessment Reports" align="left">
+            <f:section title="Archiving Assessment Reports">
+
+                <f:entry title="Enable Archived Report Storage" field="enableReportArchiving">
+                    <f:checkbox default="true" />
+                </f:entry>
+
+                <f:entry title="Azure Blob Storage Account Name" field="azureBlobAcctName" description="The Azure Blob Storage Account Name to be used for archival storage of Security Assessment reports.">
+                    <f:textbox value="${it.azureBlobAcctName}"/>
+                </f:entry>
+                <f:entry title="Azure Blob Storage Jenkins Credential ID" field="azureBlobCredId" description="The Jenkins Credentials ID for the Azure Blob Storage Credentials">
+                    <f:textbox value="${it.azureBlobCredId}"/>
+                </f:entry>
+
+
+            </f:section>
+        </f:advanced>
+
+        <f:advanced title="GitHub DevSecOps Maturity Reporting" align="left">
+            <f:section title="GitHub DevSecOps Maturity Reporting">
+
+                <f:entry title="Enable GitHub DevSecOps Maturity Reporting" field="enableScorecardReport">
+                    <f:checkbox default="true" />
+                </f:entry>
+
+                <f:entry title="GitHub Repo URL" field="gitRepoUrl" description="The GitHub Repo URL for the DevSecOps Scorecard Maturity Report.">
+                    <f:textbox value="${it.gitRepoUrl}"/>
+                </f:entry>
+                <f:entry title="CSV File Path" field="parquetFilePath" description="The CSV file path for the DevSecOps Scorecard Maturity Report.">
+                    <f:textbox value="${it.parquetFilePath}"/>
+                </f:entry>
+                <f:entry title="GitHub Jenkins Credential ID" field="gitHubCredId" description="The Jenkins Credentials ID for the GitHub Credentials">
+                    <f:textbox value="${it.gitHubCredId}"/>
+                </f:entry>
+
+
+            </f:section>
+        </f:advanced>
+
+    </f:section>
+</j:jelly>

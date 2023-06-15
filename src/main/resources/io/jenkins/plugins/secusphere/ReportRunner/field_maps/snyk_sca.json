@@ -1,0 +1,31 @@
+{
+  "input_type": "json",
+  "file_path": "/snyk_sca.json",
+  "vulnerability_list_location": "vulnerabilities",
+  "vulnerability_fields": {
+    "VulnerabilityName": "{title} Vulnerability in {packageName} version {version}",
+    "CVEID": "{identifiers.CVE.[0]}",
+    "CWEID": "{identifiers.CWE.[0]}",
+    "Description": "{description}",
+    "Classification": "SCA",
+    "Source": "Snyk-CI_CD",
+    "SourceType": "SCA",
+    "Severity": "{severity}",
+    "ReferenceName": "{references.[0].title}",
+    "ReferenceUrl": "{references.[0].url}",
+    "ReferenceTags": "",
+    "SourceCodeFileStartLine": "",
+    "SourceCodeFileStartCol": "",
+    "SourceCodeFileEndLine": "",
+    "SourceCodeFileEndCol": "",
+    "Uri": "",
+    "HtmlMethod": "",
+    "Param": "",
+    "Attack": "",
+    "Evidence": "",
+    "Solution": "Upgrade this package to one of the following versions: {fixedIn}",
+    "VulnerablePackage": "{packageName}:{version}",
+    "VulnerableFileName": "",
+    "VulnerableFilePath": ""
+  }
+}

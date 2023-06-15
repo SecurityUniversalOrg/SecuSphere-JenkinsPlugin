@@ -1,0 +1,7 @@
+{
+  "Critical": "BLOCKER",
+  "High": "CRITICAL",
+  "Medium": "MAJOR",
+  "Low": "MINOR",
+  "Informational": "INFO"
+}
