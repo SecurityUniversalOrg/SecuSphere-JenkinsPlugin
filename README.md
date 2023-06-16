@@ -34,6 +34,9 @@ The SecuSphere Jenkins plugin is a security analysis plugin that provides an aut
 * Adds assessment summary report DevOps scorecard reporting (optional)
 * Implements a security quality gate to enforce thresholds on critical and high findings (optional)
 
+## Integrations
+To view a complete list of DevSecOps Tool integrations, click [here](resources/user_guide/integrations/index.md)
+
 ## Usage - SecuSphereSecureDispatch
 The `SecuSphereSecureDispatch` plugin parses, normalizes, and summarizes security assessment reports from various CI/CD Pipeline tools and submits the report data to the SecuSphere API.
 
