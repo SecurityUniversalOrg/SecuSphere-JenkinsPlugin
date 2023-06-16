@@ -49,4 +49,8 @@ public class SecuSphereSidePanel implements Action {
         return "secusphere-" + category.toLowerCase();
     }
 
+    public String getCategory() {
+        return category;
+    }
+
 }

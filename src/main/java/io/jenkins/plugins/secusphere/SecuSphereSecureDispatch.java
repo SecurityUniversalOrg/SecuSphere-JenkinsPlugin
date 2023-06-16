@@ -124,8 +124,6 @@ public class SecuSphereSecureDispatch extends Builder implements SimpleBuildStep
             String gitBranch = getGitBranch();
             String appName = getAppName();
             String baseUrl = globalConfig.getBaseUrl();
-            listener.getLogger().println(baseUrl);
-
 
             // Declare the credentials variable
             StandardUsernamePasswordCredentials credentials = null;
@@ -206,9 +204,16 @@ public class SecuSphereSecureDispatch extends Builder implements SimpleBuildStep
                 String response = apiClient.sendPost("/add_vulnerabilities", wrappedFindings);
 
                 // Convert the response string to a JSONObject
-                JSONObject jsonResponse = new JSONObject(response);
+                String respStatus;
+                if (response != null && !response.isEmpty()) {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    respStatus = jsonResponse.getString("Status");
+                } else {
+                    respStatus = "Could not dispatch report to SecuSphere server.  Please contact your administrator.";
+                }
+
                 // Get the "Status" field from the jsonResponse
-                listener.getLogger().println("Response: " + jsonResponse.getString("Status"));
+                listener.getLogger().println("Response: " + respStatus);
 
                 run.addAction(new SecuSphereSidePanel(summaryReport, category));
 
@@ -288,7 +293,7 @@ public class SecuSphereSecureDispatch extends Builder implements SimpleBuildStep
 
         @Override
         public String getDisplayName() {
-            return Messages.SecuSphereSecureDispatch_DescriptorImpl_DisplayName();
+            return "SecuSphere Secure Dispatch";
         }
 
         @Override
