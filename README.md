@@ -322,4 +322,4 @@ This class provides a convenient way to store summary report data in a CSV file,
 
 ## License
 
-The SecuSphere Jenkins plugin is released under the MIT License.
+The SecuSphere Jenkins plugin is released under the GNU General Public License v3.0.
